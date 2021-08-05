@@ -19,7 +19,7 @@ const AddUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:3003/users", user);
+    await axios.post("https://user-table-1.herokuapp.com/api/users", user);
     history.push("/");
   };
   return (

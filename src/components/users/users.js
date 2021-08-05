@@ -15,7 +15,7 @@ const User = () => {
     loadUser();
   }, []);
   const loadUser = async () => {
-    const res = await axios.get(`http://localhost:3003/users/${id}`);
+    const res = await axios.get(`https://user-table-1.herokuapp.com/api/users/${id}`);
     setUser(res.data);
   };
   return (
