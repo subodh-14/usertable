@@ -24,12 +24,12 @@ const EditUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`https://user-table-1.herokuapp.com/api/users/${id}`, user);
+    await axios.put(`https://user-table-2.herokuapp.com/api/users/${id}`, user);
     history.push("/");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`https://user-table-1.herokuapp.com/api/users/${id}`);
+    const result = await axios.get(`https://user-table-2.herokuapp.com/api/users/${id}`);
     setUser(result.data);
   };
   return (

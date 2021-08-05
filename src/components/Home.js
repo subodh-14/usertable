@@ -10,12 +10,12 @@ const Home = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("https://user-table-1.herokuapp.com/api/users");
+    const result = await axios.get("https://user-table-2.herokuapp.com/api/users");
     setUser(result.data.reverse());
   };
 
   const deleteUser = async id => {
-    await axios.delete(`https://user-table-1.herokuapp.com/api/users/${id}`);
+    await axios.delete(`https://user-table-2.herokuapp.com/api/users/${id}`);
     loadUsers();
   };
 
